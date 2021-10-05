@@ -1,0 +1,17 @@
+<div>
+    <div id="bttns">
+        <a routerLink="home" class="bttn">home</a><br>
+        <a routerLink="about" class="bttn">about</a><br>
+        <a routerLink="contacts" class="bttn">contacts</a>
+    </div>
+
+    <div id="search">
+        <input placeholder="Search!" [(ngModel)]="search" type="text" id="searchbar">
+
+        <div id="searchResult">
+            <a class="searchLink" *ngFor="let link of links" routerLink="{{link}}">{{link}}</a>
+        </div>
+
+    </div>
+
+</div>

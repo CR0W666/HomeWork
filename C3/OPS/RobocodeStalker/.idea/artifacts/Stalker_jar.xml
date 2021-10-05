@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Stalker:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Stalker_jar</output-path>
+    <root id="archive" name="Stalker.jar">
+      <element id="module-output" name="Stalker" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/net/sf/robocode/robocode.api/1.9.2.1/robocode.api-1.9.2.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

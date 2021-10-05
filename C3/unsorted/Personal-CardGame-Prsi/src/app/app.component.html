@@ -1,0 +1,31 @@
+<div id="gamefield">
+
+
+<div id="playerTwo" class="player">
+  <div class="playing_card" *ngFor="let card of game.players[1].hand; index as i;">
+    <img [src]="card.imgs.front" class="img front" [id]="i" (click)="game.players[1].playCard(game.players[1].hand[i])">
+    <img [src]="card.imgs.back" class="img back" [id]="i">
+    <p id="card_name">{{card.name}}</p>
+  </div>
+</div>
+
+<div id="deck">
+  <div class="playing_card" *ngFor="let card of game.deck.deck;">
+    <img [src]="card.imgs.front" class="img front">
+    <img [src]="card.imgs.back" class="img back" (click)="game.draw(game.state.drawNum)">
+    <p id="card_name">{{card.name}}</p>
+  </div>
+</div>
+
+<div id="played_cards">
+
+</div>
+
+<div id="playerOne" class="player">
+  <div class="playing_card" *ngFor="let card of game.players[0].hand; index as i;">
+    <p id="card_name">{{card.name}}</p>
+    <img [src]="card.imgs.front" class="img front" [id]="i" (click)="game.players[0].playCard(game.players[0].hand[i])">
+    <img [src]="card.imgs.back" class="img back" [id]="i" >
+  </div>
+</div>
+</div>

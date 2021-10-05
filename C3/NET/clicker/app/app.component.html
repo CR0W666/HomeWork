@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>anticore</title>
+</head>
+<body>
+  <div id="mainDiv">
+    <div id="stats">
+
+      <p>Time: {{get("day")}}:{{get("hour")}}:{{get("min")}}:{{get("sec")}}</p>
+      <h1 id="currency">{{get("currency")}} {{get("suffix")}} </h1>
+    
+    </div>
+    <div id="playArea">
+      <div id="buttonDiv">
+        <button id="coreBttn" (click)="button()"> <img id="core" src="../assets/core.svg"> </button>
+      </div>
+      <div id="upgrades">
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<div>
+  <table>
+    <tr *ngFor="let row of game.field">
+      <td (click)="shoot(field)" *ngFor="let field of row"
+          [class.bg-danger]="field.value === partOfDestroyedShipValue"
+          [class.bg-orange]="field.value === partValue"
+          [class.bg-water]="field.value === waterValue"
+          class="d-inline-flex align-items-center justify-content-center border pointer"
+          style="height: 100px;width: 100px">
+        <span *ngIf="field.value === unknownValue">?</span>
+      </td>
+    </tr>
+  </table>
+  <button (click)="restart()" *ngIf="game.didWin" class="btn btn-primary">Restart</button>
+</div>

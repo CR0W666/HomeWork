@@ -1,0 +1,26 @@
+<div class="container"  >
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Access Level</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users; let row = index" >
+
+      <th scope="row">{{row+1}}</th>
+      <td>{{user.id}}</td>
+      <td>{{user.username}}</td>
+      <td>{{user.accessLevel}}</td>
+      <button class="btn" (click)="details(user.id)">Details</button>
+
+      <button class="btn" (click)="delete(user.id)">Delete</button>
+    </tr>
+
+    </tbody>
+  </table>
+</div>
+

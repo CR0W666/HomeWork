@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - messengerClient",
+            "request": "launch",
+            "mainClass": "messengerClient",
+            "projectName": "messenger_28374072"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MessengerServer",
+            "request": "launch",
+            "mainClass": "MessengerServer",
+            "projectName": "messenger_28374072"
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+<form action="">
+    <label for="name">Jmeno</label><br>
+    <input type="text" name="name" [(ngModel)]="name"><br>
+    <label for="surname">Prijmeni</label><br>
+    <input type="text" name="surname" [(ngModel)]="surname"><br>
+    <label for="email">e-mail</label><br>
+    <input type="text" name="email" [(ngModel)]="email"><br>
+    <input type="submit" value="Submit" (click)="postform()">
+</form>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="login_form">
+      <div *ngIf="logged === false" id="login_box">
+        <h2 id="login_welcome">WELCOME</h2>
+        <img id="login_img" src="../assets/login-img.png" />
+        <h4 class="login_input_title">username</h4>
+        <input
+          class="input"
+          type="text"
+          name="username"
+          placeholder="username"
+          [(ngModel)]="username"
+        />
+        <h4 class="login_input_title">password</h4>
+        <input
+          class="input"
+          type="password"
+          name="password"
+          placeholder="password"
+          [(ngModel)]="password"
+        />
+        <button id="login_button" (click)="buttonClicked()" type="submit">
+          LOGIN
+        </button>
+      </div>
+
+      <div *ngIf="logged === true">
+        <p>Welcome back</p>
+      </div>
+    </form>
+  </body>
+</html>

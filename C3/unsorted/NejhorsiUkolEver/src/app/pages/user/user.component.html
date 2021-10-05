@@ -1,0 +1,57 @@
+<div id="selectdisplayMode" *ngIf="displayMode=='select';">
+  <button (click)="mode('oldPanel')">old panel</button>
+  <button (click)="mode('users')">users</button>
+  <button (click)="mode('comments')">comments</button>
+  <button (click)="logOut()"> logout </button>
+</div>
+<header id="headerdisplayModeSelect" *ngIf="displayMode!='select'">
+  <div>
+    <button (click)="mode('oldPanel')">old panel</button>
+    <button (click)="mode('users')">users</button>
+    <button (click)="mode('comments')">comments</button>
+    <button (click)="logOut()"> logout </button>
+  </div>
+
+</header>
+<div id="oldPanel" *ngIf="displayMode=='oldPanel'">
+
+  <div>
+    <button (click)="logOut()">Logout</button>
+    <form>
+      <label for="sendToId">Who should be the recipient?</label><br>
+      <input type="number" name="commentID" id="sendToId" [(ngModel)]="user_id" required><br>
+      <input type="text" name="comment" [(ngModel)]="comment" required>
+      <button (click)="postComment()">Post!</button> <br>
+    </form>
+  </div>
+  <div>
+    <form>
+      <label for="comment">which comment you want to delete?</label><br>
+      <input type="number" name="commentID" id="comment" [(ngModel)]="IDToDelete" required><br>
+      <button (click)="deleteComment()">Delete!</button>
+    </form>
+  </div>
+  <div>
+    <form>
+      <label for="comment">how do you want to change your comment?</label><br>
+      <input type="text" name="comment" [(ngModel)]="commentToChange" required><br>
+      <label for="comment">which comment you want to change?</label><br>
+      <input type="number" name="commentID" [(ngModel)]="IDToChange" required><br>
+      <button (click)="editComment()">Change!</button>
+    </form>
+  </div>
+</div>
+
+<div id="users" *ngIf="displayMode=='users'">
+  <div id="userList">
+
+  </div>
+</div>
+
+<div id="comments" *ngIf="displayMode=='comments'">
+
+</div>
+
+<div *ngIf="displayMode!='select'">
+  <button *ngFor="let i of page" (click)="pageRefresh(i);">{{ i }}</button>
+</div>

@@ -1,0 +1,27 @@
+<div id="space">
+  <button (click)="reset()">RST</button>
+
+  <div id="calculator">
+    <div id="result">
+      <p>{{ inputSNum }}</p>
+    </div>
+
+    <div id="buttons">
+      <button (click)="calcNums(1)" class="numbers">1</button>
+      <button (click)="calcNums(2)" class="numbers">2</button>
+      <button (click)="calcNums(3)" class="numbers">3</button>
+      <button (click)="calcNums(4)" class="numbers">4</button>
+      <button (click)="calcNums(5)" class="numbers">5</button>
+      <button (click)="calcNums(6)" class="numbers">6</button>
+      <button (click)="calcNums(7)" class="numbers">7</button>
+      <button (click)="calcNums(8)" class="numbers">8</button>
+      <button (click)="calcNums(9)" class="numbers">9</button>
+      <button (click)="calcNums(0)" class="numbers">0</button>
+      <button (click)="calc('/')" class="numbers">/</button>
+      <button (click)="calc('*')" class="numbers">x</button>
+      <button (click)="calc('-')" class="numbers">-</button>
+      <button (click)="calc('+')" class="numbers">+</button>
+      <button (click)="show()" class="numbers">=</button>
+    </div>
+  </div>
+</div>

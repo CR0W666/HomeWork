@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Fuel",
+            "request": "launch",
+            "mainClass": "Fuel",
+            "projectName": "day 1_d066211c"
+        }
+    ]
+}

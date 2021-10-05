@@ -1,0 +1,12 @@
+random # 1-50
+nekde na cisle se objevi datove centrum
+uzivatel odhadne vzdalenost
+pod carou pojede sipka tak daleko jak uzivatel zadal
+zasah/hit
+5 kol
+
+
+ _
+|-|
+|=|
+"^"

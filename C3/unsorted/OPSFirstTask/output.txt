@@ -1,0 +1,3 @@
+Suma: 148734
+Nejmensi cislo: -1481
+Nejvetsi cislo: 149569

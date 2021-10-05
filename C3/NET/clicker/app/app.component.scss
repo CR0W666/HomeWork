@@ -1,0 +1,24 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background-image: url("../assets/backgroundCircuit.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#mainDiv {
+    background-color: white;
+    width: 97%;
+    height: 97%;
+    margin: auto;
+    margin-top: 0.5%;
+    border-color: black;
+    border-width: medium;
+    border-style: solid;
+}

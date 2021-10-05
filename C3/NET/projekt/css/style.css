@@ -1,0 +1,202 @@
+/*fontface ---------*/
+@font-face {
+    font-family: Akrobat-Black;
+    src: url("font/Akrobat-Black.otf") format("opentype");
+}
+@font-face {
+    font-family: Akrobat-Light;
+    src: url("font/Akrobat-Light.otf") format("opentype");
+}
+@font-face {
+    font-family: Akrobat-Regular;
+    src: url("font/Akrobat-Regular.otf") format("opentype");
+}
+/*------------------*/
+
+/*Basic css---------*/
+html,
+body {
+    width: 100%;
+    background-color: whitesmoke;
+    text-align: center;
+    font-family: Akrobat-Regular;
+}
+h1 {
+    font-family: Akrobat-Black;
+}
+canvas { 
+    width: 100%;
+    height: 100%;
+}
+a {
+    text-decoration: none !important;
+    color: black;
+} 
+a:hover {
+    -webkit-animation: colorchange 20s infinite alternate;
+    -moz-animation:    colorchange 20s infinite alternate;
+    -ms-animation:     colorchange 20s infinite alternate;
+    animation:         colorchange 20s infinite alternate;
+}
+table {
+    display: table;
+    margin-left:auto; 
+    margin-right:auto;
+    font-family: Akrobat-Regular;
+}
+hr {
+    border-style: none;
+    margin-top: 0;
+    background-color: #1abc9c;
+    height: 5px; 
+    -webkit-animation: colorchange2 20s infinite alternate;
+    -moz-animation:    colorchange2 20s infinite alternate;
+    -ms-animation:     colorchange2 20s infinite alternate;
+    animation:         colorchange2 20s infinite alternate;
+}
+footer {
+    height: 50px;
+    background-color: #313131;
+}
+footer>p{
+    margin: 0;
+    font-size: 50%;
+    background-color: #313131;
+}
+
+#dot {
+    align-self: center;
+    height: 20px;
+    width:  20px;
+    padding: 5px;
+}
+.menu {
+    display:flex;
+    align-self: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    font-family: Akrobat-Regular;
+    list-style-type: none;
+    color: initial;
+}
+footer>.menu {
+    margin-bottom: 0;
+}
+#intro {
+    display:   flex;
+    flex-flow: column;
+}
+#intro>h1 {
+    margin:  0;
+    padding: 0;
+    font-family: Akrobat-Black;
+    color:#313131;
+    opacity: 0.3;
+    font-size:45px;
+    font-weight: bold;
+    -webkit-animation: colorchange 20s infinite alternate;
+    -moz-animation:    colorchange 20s infinite alternate;
+    -ms-animation:     colorchange 20s infinite alternate;
+    animation:         colorchange 20s infinite alternate;
+    }
+
+#intro>h4 {
+    margin:  0;
+    padding: 0;
+    font-family: Akrobat-Light;
+    color: rgb(95, 92, 100);
+    opacity: 0.3;
+}
+/*  Commented out in html.
+#intro-hr {
+    width:  50%;
+    height: 0px;
+}
+*/
+
+/*------------------*/
+
+/*Media Q.----------*/
+
+@media (max-width: 800px) {
+    .mediaq {
+        display: none;
+    }
+    div>img {
+        display: none;
+    }
+}
+/*------------------*/
+
+/*Keyframes-animations*/
+@keyframes colorchange {
+    0%   { color: blue;        }
+    10%  { color: #8e44ad;     }
+    20%  { color: #1abc9c;     }
+    30%  { color: greenyellow; }
+    40%  { color: plum;        }
+    50%  { color: pink;        }
+    60%  { color: aquamarine;  }
+    70%  { color: #2980b9;     }
+    80%  { color: purple;      }
+    90%  { color: #2980b9;     }
+    100% { color: pink;        } 
+}
+@keyframes colorchange2 {
+    0%   { background-color: blue;        }
+    10%  { background-color: #8e44ad;     }
+    20%  { background-color: #1abc9c;     }
+    30%  { background-color: greenyellow; }
+    40%  { background-color: plum;        }
+    50%  { background-color: pink;        }
+    60%  { background-color: aquamarine;  }
+    70%  { background-color: #2980b9;     }
+    80%  { background-color: purple;      }
+    90%  { background-color: #2980b9;     }
+    100% { background-color: pink;        } 
+}
+
+/* @-webkit-keyframes colorchange {
+    0%   { color: blue;        }
+    10%  { color: #8e44ad;     }
+    20%  { color: #1abc9c;     }
+    30%  { color: greenyellow; }
+    40%  { color: plum;        }
+    50%  { color: pink;        }
+    60%  { color: aquamarine;  }
+    70%  { color: #2980b9;     }
+    80%  { color: purple;      }
+    90%  { color: #2980b9;     }
+    100% { color: pink;        } 
+}
+
+@-ms-keyframes colorchange {
+    0%   { color: blue;        }
+    10%  { color: #8e44ad;     }
+    20%  { color: #1abc9c;     }
+    30%  { color: greenyellow; }
+    40%  { color: plum;        }
+    50%  { color: pink;        }
+    60%  { color: aquamarine;  }
+    70%  { color: #2980b9;     }
+    80%  { color: purple;      }
+    90%  { color: #2980b9;     }
+    100% { color: pink;        }
+}
+
+@-moz-keyframes colorchange {
+    0%   { color: blue;        }
+    10%  { color: #8e44ad;     }
+    20%  { color: #1abc9c;     }
+    30%  { color: greenyellow; }
+    40%  { color: plum;        }
+    50%  { color: pink;        }
+    60%  { color: aquamarine;  }
+    70%  { color: #2980b9;     }
+    80%  { color: purple;      }
+    90%  { color: #2980b9;     }
+    100% { color: pink;        }
+}*/
+
+/*------------------*/

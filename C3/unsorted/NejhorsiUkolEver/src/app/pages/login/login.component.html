@@ -1,0 +1,15 @@
+<div id="wrapper">
+
+
+<div id="mainDiv">
+  <form id="form">
+    <label for="email">E-mail: </label><br>
+    <input type="text" name="email" id="email" class="input" [(ngModel)]="email" required> <br>
+    <label for="pass">Password: </label><br>
+    <input type="text" name="pass" id="pass" class="input" [(ngModel)]="pass" required><br>
+    <button (click)="getAccesstoken()" id="loginBttn">Login!</button> <br>
+  </form>
+  not yet a member? <a routerLink="/register" routerLinkActive="active">Register</a>
+</div>
+</div>
+
