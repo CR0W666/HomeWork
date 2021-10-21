@@ -9,6 +9,7 @@ public class test21_10_2021 {
             System.out.println("Enter number " + (i+1) +".");
             nums[i] = sc.nextInt();
         }
+        sc.close();
         double avg = 0;
         for (int num : nums) {
             avg += num;
