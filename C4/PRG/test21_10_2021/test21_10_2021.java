@@ -9,16 +9,16 @@ public class test21_10_2021 {
             System.out.println("Enter number " + (i+1) +".");
             nums[i] = sc.nextInt();
         }
-        int median = 0;
+        int avg = 0;
         for (int num : nums) {
-            median += num;
+            avg += num;
         }
-        median /= nums.length;
+        avg /= nums.length;
 
         int sum = 0;
         for (int num : nums) {
-            if(num >= median) sum += num;
+            if(num >= avg) sum += num;
         }
-        System.out.println("Sum of numbers bigger then the median of the total sum: " + sum);
+        System.out.println("Sum of numbers bigger then the average of the total sum: " + sum);
     }
 }
