@@ -14,11 +14,11 @@ public class test21_10_2021 {
         for (int num : nums) {
             avg += num;
         }
-        avg /= nums.length;
+        avg /= Math.ceil(nums.length);
 
         int sum = 0;
         for (int num : nums) {
-            if(num >= Math.ceil(avg)) sum += num;
+            if(num >= avg) sum += num;
         }
         System.out.println("Sum of numbers bigger then the average of the total sum: " + sum);
     }
