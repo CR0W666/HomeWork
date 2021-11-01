@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import java.util.OptionalDouble;
 import java.util.Scanner;
 public class snc {
     public static void main(String[] args) {
@@ -25,16 +26,8 @@ public class snc {
         return nums;
     }
 
-    public static double sum(ArrayList<Double> nums) {
-        double sum = 0;
-        for (double num : nums) {
-            sum += num;
-        }
-        return sum;
-    }
-
     public static double avg(ArrayList<Double> nums) {
-        return sum(nums) / Math.ceil(nums.size());
+        return nums.stream().mapToDouble(Double::valueOf).average().orElseThrow();
     }
 
     public static double sumAboveAvg(ArrayList<Double> nums) {
