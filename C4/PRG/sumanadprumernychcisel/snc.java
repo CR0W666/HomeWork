@@ -1,6 +1,5 @@
 
 import java.util.ArrayList;
-import java.util.OptionalDouble;
 import java.util.Scanner;
 public class snc {
     public static void main(String[] args) {
