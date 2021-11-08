@@ -33,14 +33,18 @@ public class cnbKurz {
             String input = input(sc, pattern);
             if(input.equals("END")) break;
             String[] values = input.split(" ");
-            
-            ExchangeRate rate1 = getRateByName(values[1].toUpperCase(), rates);
-            ExchangeRate rate2 = getRateByName(values[3].toUpperCase(), rates);
+            ExchangeRate rate1;
+            ExchangeRate rate2;
+            try {
+                rate1 = getRateByName(values[1].toUpperCase(), rates);
+                rate2 = getRateByName(values[3].toUpperCase(), rates);
+            }
+            catch(IllegalArgumentException e) {System.out.println(e.getMessage()); continue; }
             double result = convert(Double.parseDouble(values[0]), rate1, rate2);
             System.out.println(values[0] + " " + rate1.code + " = " + result + " " + rate2.code);
         }
 
-        
+
 
 
 
