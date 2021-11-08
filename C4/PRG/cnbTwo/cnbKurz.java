@@ -86,7 +86,7 @@ public class cnbKurz {
         
         System.out.println("----------------\nDostupne Kurzy:");
         for (ExchangeRate rate : rates) System.out.print(rate.code + " | ");
-        System.out.println("\nZadejte kurz ke konverzi ve formatu {POCET} {MENA} TO {MENA2}\nEq.: 100 EUR TO CZK");
+        System.out.println("\nZadejte kurz ke konverzi ve formatu {POCET} {MENA} TO {MENA2}\nEq.: 100 EUR TO JPY");
         System.out.println("----------------");
 
         return rates;
@@ -103,7 +103,7 @@ public class cnbKurz {
     }
 
     public static double convert(double amount, ExchangeRate exR1, ExchangeRate exR2) {
-        return (amount * (exR1.rate / exR1.amount)) / exR2.rate;
+        return (amount * (exR1.rate / exR1.amount)) / (exR2.rate / exR2.amount);
     }
 }
 
