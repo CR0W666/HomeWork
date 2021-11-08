@@ -98,7 +98,7 @@ public class cnbKurz {
             System.out.println("Zadejte parametry (END pro konec)");
             input = sc.nextLine();            
             if(pattern.matcher(input).matches() || input.equals("END")) return input;
-            else System.out.println("Neplatny format.\nSpravny format: {POCET} {MENA} TO {MENA2}\nEq.: 100 EUR TO CZK");
+            else System.out.println("Neplatny format.\nSpravny format: {POCET} {MENA} TO {MENA2}\nEq.: 100 EUR TO JPY");
         }
     }
 
