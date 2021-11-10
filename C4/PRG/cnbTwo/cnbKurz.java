@@ -19,9 +19,6 @@ import java.util.regex.Pattern;
  * Vypnutí vstupu nechám na Vás - můžete použít hasNext a Ctrl+D pro vypnutí
  * nebo kontrolu vstupu na ukončovací hlášku.
  */
-
- // match correct input
- // 
 public class cnbKurz {
 
     public static void main(String[] args) {
