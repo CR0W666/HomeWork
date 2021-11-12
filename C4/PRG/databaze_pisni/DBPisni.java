@@ -87,12 +87,12 @@ public class DBPisni {
     public static void getAvgSongLengthOfAuthor(Song[] songs, Scanner sc) {
 
         System.out.println("Zadejte nazev autora.");
-        String author = sc.nextLine();
+        String author = sc.nextLine().toUpperCase();
         double totalLength = 0;
         int numOfSongs = 0;
         
         for(Song song : songs) {
-            if(song.getAuthor().equals(author)) {
+            if(song.getAuthor().toUpperCase().equals(author)) {
                 totalLength += song.getLength();
                 numOfSongs++;
             }
@@ -108,10 +108,10 @@ public class DBPisni {
     public static void getNumOfSongsOfAuthor(Song[] songs, Scanner sc) {
 
         System.out.println("Zadejte nazev autora.");
-        String author = sc.nextLine();
+        String author = sc.nextLine().toUpperCase();
         int numOfSongs = 0;
 
-        for(Song song : songs) if(song.getAuthor().equals(author)) numOfSongs++;
+        for(Song song : songs) if(song.getAuthor().toUpperCase().equals(author)) numOfSongs++;
 
         if(numOfSongs == 0) {
             System.out.println("Neznamy autor.");
@@ -123,10 +123,10 @@ public class DBPisni {
     public static void getNumOfSongsContainingWord(Song[] songs, Scanner sc) {
 
         System.out.println("Zadejte frazi, kterou hledate.");
-        String word = sc.nextLine();
+        String word = sc.nextLine().toUpperCase();
         int numOfSongs = 0;
 
-        for(Song song : songs) if(song.getName().contains(word)) numOfSongs++;
+        for(Song song : songs) if(song.getName().toUpperCase().contains(word)) numOfSongs++;
 
         if(numOfSongs == 0) {
             System.out.println("Zadny nazev pisne neobsahuje \"" + word + "\".");
