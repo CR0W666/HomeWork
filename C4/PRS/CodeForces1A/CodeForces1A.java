@@ -1,3 +1,5 @@
+package CodeForces1A;
+
 public class CodeForces1A {
     
     /** 

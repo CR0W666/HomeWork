@@ -1,3 +1,5 @@
+package primes;
+
 import java.util.Scanner;
 
 class Primes {
@@ -5,6 +7,7 @@ class Primes {
         Scanner sc = new Scanner(System.in);
         System.out.println("Zadejte cislo do ktereho chcete najit prvocisla");
         findPrimes(sc.nextInt());
+        sc.close();
     }
 
     public static boolean isPrime(int number) {

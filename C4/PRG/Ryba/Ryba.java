@@ -1,3 +1,5 @@
+package Ryba;
+
 import java.util.Scanner;
 
 public class Ryba {

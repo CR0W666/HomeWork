@@ -1,3 +1,5 @@
+package SudyDelitelnyTri;
+
 public class SudyDelitelnyTri {
     public static void main(String[] args) {
         test();

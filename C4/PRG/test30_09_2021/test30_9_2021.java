@@ -1,3 +1,5 @@
+package test30_09_2021;
+
 import java.util.Scanner;
 
 class test30_09_2021 {

@@ -1,4 +1,4 @@
-package CoolSifra;
+package Cool_Sifra_2;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

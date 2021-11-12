@@ -1,3 +1,5 @@
+package test16_09_2021;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 

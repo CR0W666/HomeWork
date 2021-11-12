@@ -1,3 +1,5 @@
+package test23_09_2021;
+
 class test23_9_2021 {
     public static void main(String[] args) {
         test();

@@ -1,3 +1,5 @@
+package CodeForces550A;
+
 public class CodeForces550A {
     public static void main(String[] args) {
         test();
