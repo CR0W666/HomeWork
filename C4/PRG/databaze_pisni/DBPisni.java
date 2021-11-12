@@ -4,26 +4,32 @@ import java.util.Scanner;
 
 public class DBPisni {
     /*
-    Napište aplikaci, která na vstupu dostane počet písní a poté pro každou píseň dostane interpreta, název a délku ve vteřinách.
-    Program si tyto písně uloží.
+    * Napište aplikaci, která na vstupu dostane počet písní a poté pro každou píseň dostane interpreta, název a délku ve vteřinách.
+    * Program si tyto písně uloží.
 
-    Poté nabídne uživateli možnost 3 operací:
-    průměrnou délku písniček pro interpreta (uživatel zadá jméno interpreta, pro kterého chce průměr)
-    počet písní pro interpreta (uživatel zadá jméno interpreta, pro kterého chce počet písní)
-    počet písní, které obsahují určitou frázi (uživatel tuto frázi zadá)
-    Uživatele varujte, pokud si vybere neznámou operaci, program ale můžete ukončit.
-    Program by neměl nikdy dělit 0.
-    S inputy počítejte, že jsou vždy validní (délky budou čísla).
-    Každou píseň reprezentujte třídou.
-    Každou operaci proveďtě v nové metodě.
+    * Poté nabídne uživateli možnost 3 operací:
+    * 1) průměrnou délku písniček pro interpreta    (uživatel zadá jméno interpreta, pro kterého chce průměr)
+    * 2) počet písní pro interpreta                 (uživatel zadá jméno interpreta, pro kterého chce počet písní)
+    * 3) počet písní, které obsahují určitou frázi  (uživatel tuto frázi zadá)
+    *  
+    * - Uživatele varujte, pokud si vybere neznámou operaci, program ale můžete ukončit.
+    * - Program by neměl nikdy dělit 0.
+    * - S inputy počítejte, že jsou vždy validní (délky budou čísla).
+    * - Každou píseň reprezentujte třídou.
+    * - Každou operaci proveďtě v nové metodě.
     */
     public static void main(String[] args) {
         final Scanner sc = new Scanner(System.in);
-        final Song[] songs = insertSongs(sc);
+        final Song[] songs = insertSongs(sc); //initializes the database of songs based on user input
+        final String choiceInfo = "---------------------------\n"+
+                                  "Zadejte jakou operaci chcete provest.\n"+
+                                  "1) Prumerna delka pisne interpreta\n2) Pocet pisni interpreta\n"+
+                                  "3) Pocet pisni obsahujici frazi\n"+
+                                  "\"END\") konec";
+        //Main loop
         String choice;
-
         while (true) {
-            choice = choice(sc);
+            choice = inputHandler(sc, choiceInfo, true);
             switch(choice.toUpperCase()) {
                 case"1":
                     getAvgSongLengthOfAuthor(songs, sc);
@@ -47,16 +53,15 @@ public class DBPisni {
         
     }
 
+    //User inputs songs and their info, returns array of songs
     public static Song[] insertSongs(Scanner sc) {
 
-        System.out.println("Kolik chcete zadat pisni do databaze?");
-
-        int numOfSongs = Integer.valueOf(sc.nextLine());
+        final int numOfSongs = Integer.valueOf(inputHandler(sc, "Kolik chcete zadat pisni do databaze?", false));
         Song[] songs = new Song[numOfSongs];
+        
         String author;
         String name;
         double length;
-
         for (int i = 0; i < numOfSongs; i++) {
 
             System.out.println("Zadejte nazev interpreta");
@@ -74,73 +79,77 @@ public class DBPisni {
         return songs;
     }
 
-    public static String choice(Scanner sc) {
-        System.out.println("---------------------------\n"+
-                           "Zadejte jakou operaci chcete provest.\n"+
-                           "1) Prumerna delka pisne interpreta\n2) Pocet pisni interpreta\n"+
-                           "3) Pocet pisni obsahujici frazi\n"+
-                           "\"END\") konec");
-
-        return sc.nextLine();
-    }
-
+    //returns the average length of songs of desired author
     public static void getAvgSongLengthOfAuthor(Song[] songs, Scanner sc) {
 
-        System.out.println("Zadejte nazev autora.");
-        String author = sc.nextLine().toUpperCase();
+        final String author = inputHandler(sc, "Zadejte nazev autora.", true);
+        
         double totalLength = 0;
         int numOfSongs = 0;
-        
         for(Song song : songs) {
+            // Possible wrong positives due to Eminem and eMinem converting into EMINEM. 
+            // Despite being different, I dont think this would be a problem in reality
             if(song.getAuthor().toUpperCase().equals(author)) {
                 totalLength += song.getLength();
                 numOfSongs++;
             }
         }
-        
-        if(numOfSongs == 0) {
-            System.out.println("Neznamy autor.");
-            return;
-        }
-        System.out.println("Prumerna delka pisnicek autora " + author + ": " + (totalLength/numOfSongs));
+
+        final String truthy = "Prumerna delka pisnicek autora " + author + ": " + (totalLength/numOfSongs);
+        final String falsy = "Neznamy autor.";
+        messageHandler(truthy, falsy, numOfSongs);
     }
 
+    //returns the number of songs of desired author
     public static void getNumOfSongsOfAuthor(Song[] songs, Scanner sc) {
 
-        System.out.println("Zadejte nazev autora.");
-        String author = sc.nextLine().toUpperCase();
+        final String author = inputHandler(sc, "Zadejte nazev autora.", true);
         int numOfSongs = 0;
 
+        //Oneliner, still easy to read.
+        //Searches for songs made by author, increments int for every hit.
+        //Same problem as elsewhere with .toUpperCase() making possible wrong positives 
         for(Song song : songs) if(song.getAuthor().toUpperCase().equals(author)) numOfSongs++;
 
-        if(numOfSongs == 0) {
-            System.out.println("Neznamy autor.");
-            return;
-        }
-        System.out.println("Pocet pisnicek autora " + author + ": " + numOfSongs);
+        final String truthy = "Pocet pisnicek autora " + author + ": " + numOfSongs;
+        final String falsy = "Neznamy autor.";
+        messageHandler(truthy, falsy, numOfSongs);
     }
 
+    //returns the number of songs containing desired phrase
     public static void getNumOfSongsContainingWord(Song[] songs, Scanner sc) {
 
-        System.out.println("Zadejte frazi, kterou hledate.");
-        String word = sc.nextLine().toUpperCase();
+        final String word = inputHandler(sc, "Zadejte frazi, kterou hledate.", true);
         int numOfSongs = 0;
 
+        //Oneliner, still easy to read.
+        //Searches for songs including desired phrase, increments int for every hit. 
+        // .toUpperCase() could be wrong here if we take U & u as different chars.
         for(Song song : songs) if(song.getName().toUpperCase().contains(word)) numOfSongs++;
 
-        if(numOfSongs == 0) {
-            System.out.println("Zadny nazev pisne neobsahuje \"" + word + "\".");
-            return;
-        }
-        System.out.println("Pocet pisnicek obsahujici \"" + word + "\": " + numOfSongs);
+        final String truthy = "Pocet pisnicek obsahujici \"" + word + "\": " + numOfSongs;
+        final String falsy = "Zadny nazev pisne neobsahuje \"" + word + "\".";
+        messageHandler(truthy, falsy, numOfSongs);
 
+    }
+
+    //easier result printing
+    public static void messageHandler(String truthy, String falsy, int numOfSongs) {
+        if(numOfSongs == 0) System.out.println(falsy);
+        else                System.out.println(truthy);
+    }
+
+    //easier input manipulation
+    public static String inputHandler(Scanner sc, String message, boolean upperCase) {
+        System.out.println(message);
+        return (upperCase) ? sc.nextLine().toUpperCase() : sc.nextLine();
     }
 
     public static boolean invalidChoice(Scanner sc) {
 
-        System.out.println("Neplatna funkce, chcete program ukoncit? Y/N");
+        final String message = "Neplatna funkce, chcete program ukoncit? Y/N";
 
-        if(sc.nextLine().toUpperCase().equals("Y")) return true;
+        if(inputHandler(sc, message, true).equals("Y")) return true;
         else return false;
     }
 
