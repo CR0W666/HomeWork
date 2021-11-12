@@ -19,12 +19,12 @@ public class DBPisni {
     */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         Song[] songs = insertSongs(sc);
+        String choice;
 
-        while (sc.hasNext()) {
-            String choice = choice(sc);
-            switch(choice) {
+        while (true) {
+            choice = choice(sc);
+            switch(choice.toUpperCase()) {
                 case"1":
                     getAvgSongLengthOfAuthor(songs, sc);
                     break;
@@ -34,8 +34,13 @@ public class DBPisni {
                 case"3":
                     getNumOfSongsContainingWord(songs, sc);
                     break;
+                case"END":
+                    System.out.println("Ukoncuji program");
+                    sc.close();
+                    System.exit(1);
+                    break;
                 default:
-                    if(invalidChoice(sc)) System.exit(1);
+                    if(invalidChoice(sc)) {sc.close(); System.exit(1);}
                     break;
             }
 
@@ -46,21 +51,18 @@ public class DBPisni {
     public static Song[] insertSongs(Scanner sc) {
 
         System.out.println("Kolik chcete zadat pisni do databaze?");
-        int numOfSongs = sc.nextInt();
-
+        int numOfSongs = Integer.valueOf(sc.nextLine());
         Song[] songs = new Song[numOfSongs];
         String author;
         String name;
         double length;
-        //sc.nextLine();
         for (int i = 0; i < numOfSongs; i++) {
-            author = sc.nextLine();
             System.out.println("Zadejte nazev interpreta");
             author = sc.nextLine();
             System.out.println("Zadejte nazev pisnicky");
             name = sc.nextLine();
             System.out.println("Zadejte delku pisnicky v sekundach");
-            length = sc.nextDouble();
+            length = Double.valueOf(sc.nextLine());
             songs[i] = new Song(name, author, length);
         }
 
@@ -68,9 +70,8 @@ public class DBPisni {
     }
 
     public static String choice(Scanner sc) {
-        String choice;
-        System.out.println("Zadejte jakou operaci chcete provest.\n1) Prumerna delka pisne interpreta\n2) Pocet pisni interpreta\n3) Pocet pisni obsahujici frazi\n\"END\") konec");
-        choice = sc.nextLine();
+        System.out.println("---------------------------\nZadejte jakou operaci chcete provest.\n1) Prumerna delka pisne interpreta\n2) Pocet pisni interpreta\n3) Pocet pisni obsahujici frazi\n\"END\") konec");
+        String choice = sc.nextLine();
         return choice;
     }
 
@@ -86,7 +87,7 @@ public class DBPisni {
             }
         }
         if(numOfSongs == 0) {
-            System.out.println("Neznamy autor");
+            System.out.println("Neznamy autor.");
             return;
         }
         System.out.println("Prumerna delka pisnicek autora " + author + ": " + (totalLength/numOfSongs));
@@ -98,7 +99,7 @@ public class DBPisni {
         int numOfSongs = 0;
         for(Song song : songs) if(song.getAuthor().equals(author)) numOfSongs++;
         if(numOfSongs == 0) {
-            System.out.println("Neznamy autor");
+            System.out.println("Neznamy autor.");
             return;
         }
         System.out.println("Pocet pisnicek autora " + author + ": " + numOfSongs);
@@ -108,18 +109,20 @@ public class DBPisni {
         System.out.println("Zadejte frazi, kterou hledate.");
         String word = sc.nextLine();
         int numOfSongs = 0;
+        
         for(Song song : songs) if(song.getName().contains(word)) numOfSongs++;
+
         if(numOfSongs == 0) {
-            System.out.println("Zadny nazev pisne neobsahuje " + word + ".");
+            System.out.println("Zadny nazev pisne neobsahuje \"" + word + "\".");
             return;
         }
-        System.out.println("Pocet pisnicek obsahujici " + word + ": " + numOfSongs);
+        System.out.println("Pocet pisnicek obsahujici \"" + word + "\": " + numOfSongs);
 
     }
 
     public static boolean invalidChoice(Scanner sc) {
         System.out.println("Neplatna funkce, chcete program ukoncit? Y/N");
-        if(sc.nextLine().equals("Y")) return true;
+        if(sc.nextLine().toUpperCase().equals("Y")) return true;
         else return false;
     }
 }
