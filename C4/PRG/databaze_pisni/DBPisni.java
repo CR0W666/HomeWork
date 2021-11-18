@@ -58,7 +58,7 @@ public class DBPisni {
 
         final int numOfSongs = Integer.valueOf(inputHandler(sc, "Kolik chcete zadat pisni do databaze?", false));
         Song[] songs = new Song[numOfSongs];
-        
+
         String author;
         String name;
         double length;
@@ -134,8 +134,8 @@ public class DBPisni {
     }
 
     //easier result printing
-    public static void messageHandler(String truthy, String falsy, int numOfSongs) {
-        if(numOfSongs == 0) System.out.println(falsy);
+    public static void messageHandler(String truthy, String falsy, int validationNumber) {
+        if(validationNumber == 0) System.out.println(falsy);
         else                System.out.println(truthy);
     }
 

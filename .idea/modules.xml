@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/C4/C4.iml" filepath="$PROJECT_DIR$/C4/C4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/HomeWork.iml" filepath="$PROJECT_DIR$/.idea/HomeWork.iml" />
+      <module fileurl="file://$PROJECT_DIR$/C4/PRG/PRG.iml" filepath="$PROJECT_DIR$/C4/PRG/PRG.iml" />
+      <module fileurl="file://$PROJECT_DIR$/C4/PRS/PRS.iml" filepath="$PROJECT_DIR$/C4/PRS/PRS.iml" />
+    </modules>
+  </component>
+</project>
