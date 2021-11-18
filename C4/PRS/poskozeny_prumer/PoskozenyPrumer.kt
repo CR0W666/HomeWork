@@ -1,5 +1,5 @@
 import kotlin.text.*
-import
+import java.util.Scanner
 
 object PoskozenyPrumer {
     fun main(args: Array<String>) {
