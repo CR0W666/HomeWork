@@ -1,5 +1,6 @@
 import kotlin.text.*
-import java.util.Scanner
+import Java.util.Scanner
+import kotlin.math.ceil
 
 object PoskozenyPrumer {
     fun main(args: Array<String>) {
@@ -9,10 +10,10 @@ object PoskozenyPrumer {
         for (input in inputs) println(input)
     }
 
-    fun inputSequence(sc: Scanner): Array<String> {
+    private fun inputSequence(sc: Scanner): Array<String> {
         val inputs: Array<String>
-        val counter = 0
-        val input = ""
+        var counter = 0
+        var input = ""
         while (sc.hasNext()) {
             input = sc.nextLine()
             if(input == "END") break
@@ -22,7 +23,7 @@ object PoskozenyPrumer {
         return inputs
     }
 
-    fun errorCorrection(inputs: Array<String>): Array<String> {
+    private fun errorCorrection(inputs: Array<String>): Array<String> {
         for (i in inputs.indicies) {
 
             if(!isNumeric(inputs[i])) {
