@@ -1,3 +1,5 @@
+package abba;
+
 import java.util.Scanner;
 
 class Abba {
@@ -12,7 +14,9 @@ class Abba {
                 validate(input);
                 System.out.println("\nEnter a string: \n");
             }
-        } finally {sc.close();}
+        } finally {
+            sc.close();
+        }
 
     }
 
@@ -43,10 +47,12 @@ class Abba {
         char[] chars = input.toCharArray();
         String phaseString = (phase == 0) ? "AB" : "BA";
         for (int i = 0; i < chars.length; i++) {
-            if(i+1 >= chars.length)break;
-            if(chars[i]==phaseString.toCharArray()[0] && chars[i+1]==phaseString.toCharArray()[1]) {
+            if (i + 1 >= chars.length)
+                break;
+            if (chars[i] == phaseString.toCharArray()[0]
+                    && chars[i + 1] == phaseString.toCharArray()[1]) {
                 chars[i] = '#';
-                chars[i+1] = '#';
+                chars[i + 1] = '#';
             }
         }
         input = "";

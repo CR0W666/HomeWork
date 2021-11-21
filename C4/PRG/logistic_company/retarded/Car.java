@@ -24,6 +24,6 @@ public class Car {
     }
 
     public void setWeight(double weight) {
-        this.weight = weight; 
+        this.weight = weight;
     }
 }

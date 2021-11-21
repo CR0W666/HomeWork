@@ -21,38 +21,43 @@ public class LogisticCompanyRetarded {
                                                                  0.0))
                                            .toList();
         
-                    while(true) {
-                        System.out.println("Zadejte cislo auta a mezerou oddelte kolik chcete nalozit/vylozit. (6 -30) \"END\" pro konec");
-                        
+                    while (true) {
+                        System.out.println(
+                                "Zadejte cislo auta a mezerou oddelte kolik chcete nalozit/vylozit. (6 -30) \"END\" pro konec");
+
                         String input = sc.nextLine();
-                        if(input.equals("END")) break;
+                        if (input.equals("END"))
+                            break;
                         loadingAndUnloading(cars, input);
                     }
 
-                    System.out.println("Prumerna Vaha: " + cars.stream().mapToDouble(Car::getWeight).average().getAsDouble());
-                
+                    System.out.println("Prumerna Vaha: "
+                            + cars.stream().mapToDouble(Car::getWeight).average().getAsDouble());
+
                 } catch (Exception e) {
                     System.out.println("Neplatny vstup, chcete ukoncit program? y/n");
-                    if(sc.nextLine().equalsIgnoreCase("Y")) break;
+                    if (sc.nextLine().equalsIgnoreCase("Y"))
+                        break;
                 }
             }
         }  
     }
 
     private static void loadingAndUnloading(List<Car> cars, String input) {
-        try {        
+        try {
             String[] idAndWeight = input.split(" ");
-            cars.stream()
-                .takeWhile(car -> Integer.parseInt(idAndWeight[0]) < (car.getId()+1) || Integer.parseInt(idAndWeight[1]) >= 0)
-                .forEach(car -> {
-                    int inputID = Integer.parseInt(idAndWeight[0]);
-                    double inputChange = Double.parseDouble(idAndWeight[1]);
-                    if((car.getId()+1) == inputID) {
-                        if((car.getWeight() + inputChange) > 0 && (car.getWeight() + inputChange <= car.getCarryWeight())) 
-                            car.setWeight(car.getWeight()+inputChange); 
-                    } else System.out.println("Neplatna vaha");
+            cars.stream().takeWhile(car -> Integer.parseInt(idAndWeight[0]) < (car.getId() + 1)
+                    || Integer.parseInt(idAndWeight[1]) >= 0).forEach(car -> {
+                        int inputID = Integer.parseInt(idAndWeight[0]);
+                        double inputChange = Double.parseDouble(idAndWeight[1]);
+                        if ((car.getId() + 1) == inputID) {
+                            if ((car.getWeight() + inputChange) > 0
+                                    && (car.getWeight() + inputChange <= car.getCarryWeight()))
+                                car.setWeight(car.getWeight() + inputChange);
+                        } else
+                            System.out.println("Neplatna vaha");
                     });
-        
+
         } catch (NumberFormatException e) {
             System.out.println("Neplatny vstup");
         }

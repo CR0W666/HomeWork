@@ -2,8 +2,8 @@ package databaze_pisni;
 
 public class Song {
     private String name; // Name Of Song
-    private String author; 
-    private double length;   
+    private String author;
+    private double length;
 
     public Song(String name, String author, double length) {
         this.name = name;
