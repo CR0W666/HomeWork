@@ -12,7 +12,7 @@ public class Atbash {
         for (int i = 0; i < sentence.length(); i++) {
             Character element = sentence.charAt(i);
             //------ Remember if char was upper case ---------
-            boolean isUpperCase = (Character.isUpperCase(element)) ? true : false;
+            boolean isUpperCase = (Character.isUpperCase(element));
             element = Character.toLowerCase(element); //convert back to lower case
             //------------------------------------------------
 
