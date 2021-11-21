@@ -1,4 +1,4 @@
-package logistic_company;
+package logistic_company.retarded;
 
 public class Car {
     private int id;
@@ -24,6 +24,6 @@ public class Car {
     }
 
     public void setWeight(double weight) {
-        this.weight = weight;
+        this.weight = weight; 
     }
 }

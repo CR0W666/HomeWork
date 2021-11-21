@@ -30,9 +30,11 @@ public class factorial {
             sc.next();
             input = input(sc, "\nWrong input, please enter a number");
         }
-    
+
         return input;
     }
+
+
 
     public static long fact(long factorialOf) {
         long result = 1;
@@ -125,3 +127,5 @@ public class factorial {
         return trialResults;
     }
 }
+
+
