@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class abba {
+class Abba {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String input = "";
@@ -36,8 +36,7 @@ class abba {
 
     public static boolean search(String input, int phase) {
         String phaseString = (phase == 0) ? "AB" : "BA";
-        if(!input.contains(phaseString)) return false;
-        return true;
+        return input.contains(phaseString);
     }
 
     public static String clean(String input, int phase) {
@@ -51,10 +50,11 @@ class abba {
             }
         }
         input = "";
+        StringBuilder builder = new StringBuilder();
         for (char c : chars) {
-            input += c;
+            builder.append(c);
         }
-        return input;
+        return builder.toString();
     }
 
 
