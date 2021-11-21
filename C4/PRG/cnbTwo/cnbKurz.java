@@ -1,8 +1,9 @@
-package cnbTwo;
+package Cnbtwo;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
@@ -19,16 +20,16 @@ import java.util.regex.Pattern;
  * Vypnutí vstupu nechám na Vás - můžete použít hasNext a Ctrl+D pro vypnutí
  * nebo kontrolu vstupu na ukončovací hlášku.
  */
-public class cnbKurz {
+public class CnbKurz {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Pattern pattern = Pattern.compile("((^[0-9]*\\.[0-9]+)|(^[0-9]+))\\s[a-zA-Z]{3}+\\s[Tt][Oo]\\s[a-zA-Z]{3}+$");
-        ArrayList<ExchangeRate> rates = initAndWelcome();
-
-        while(true) {
-            String input = input(sc, pattern);
-            if(input.equals("END")) break;
+        List<ExchangeRate> rates = initAndWelcome();
+        
+        String input = "";
+        while(!input.equals("END")) {
+            input = input(sc, pattern);
             String[] values = input.split(" ");
             ExchangeRate rate1;
             ExchangeRate rate2;
@@ -48,7 +49,7 @@ public class cnbKurz {
 
     }
 
-    public static ExchangeRate getRateByName(String name, ArrayList<ExchangeRate> rates) {
+    public static ExchangeRate getRateByName(String name, List<ExchangeRate> rates) {
         for (ExchangeRate exRate : rates) {
             if (exRate.getCode().equals(name))
                 return exRate;
@@ -56,9 +57,9 @@ public class cnbKurz {
         throw new IllegalArgumentException("Neznamy Kurz");
     }
 
-    public static ArrayList<ExchangeRate> initRates() throws FileNotFoundException {
-        ArrayList<ExchangeRate> rates = new ArrayList<ExchangeRate>();
-        try (Scanner fileRead = new Scanner(new File(cnbKurz.class.getResource("kurzy.txt").getFile()))) {
+    public static List<ExchangeRate> initRates() throws FileNotFoundException {
+        ArrayList<ExchangeRate> rates = new ArrayList<>();
+        try (Scanner fileRead = new Scanner(new File(CnbKurz.class.getResource("kurzy.txt").getFile()))) {
             int cnt = 0;
             while (fileRead.hasNext()) {
                 cnt++;
@@ -71,13 +72,13 @@ public class cnbKurz {
         return rates;
     }
 
-    public static ArrayList<ExchangeRate> initAndWelcome() {
-        ArrayList<ExchangeRate> rates;
+    public static List<ExchangeRate> initAndWelcome() {
+        List<ExchangeRate> rates;
         try {
             rates = initRates();
         } catch (FileNotFoundException e) {
             System.out.println("Soubor s kurzy nebyl nalezen. Pridejte soubor s kurzy do stejneho adresare jako program s nazvem \"kurzy.txt\"");
-            rates = new ArrayList<ExchangeRate>();
+            rates = new ArrayList<>();
             System.exit(0);
         }
         
