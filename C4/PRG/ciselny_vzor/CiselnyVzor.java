@@ -6,8 +6,8 @@ public class CiselnyVzor {
     public static void main(String[] args) {
         programInfo();
         String message = """
-                   Please input the desired size of the pyramid\"""
-                    (only numbers, numbers larger than 1000 work better)
+                        Please input the desired size of the pyramid\"""
+                        (only numbers, numbers larger than 1000 work better)
                 \"""\"""-----------------------------------------------------------""";
 
         renderPyramid(String.valueOf(init(message)));
@@ -15,10 +15,12 @@ public class CiselnyVzor {
     }
 
     public static void programInfo() {
-        String message =
-                """
+        String message = """
                         This program takes in a number, for example 5321 and then prints a pyramid as such: \"""\"""
-                        5321\"""532\"""53\"""5\"""
+                        5321\"""
+                        532\"""
+                        53\"""
+                        5\"""
                         """;
 
         System.out.println(message);
