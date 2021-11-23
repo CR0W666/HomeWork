@@ -5,3 +5,12 @@
     ],
     "editor.fontFamily": "Fira Code"
 }
+
+
+//custom cmder user aliases
+// gf=git add . & git commit -m $* & git push
+// ga=git add . 
+// gc=git commit -m $*
+// gac=git add & git commit -m $*
+// gp=git push
+// gu=git pull
