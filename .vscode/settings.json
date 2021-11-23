@@ -15,3 +15,7 @@
 // gac=git add & git commit -m $*
 // gp=git push
 // gu=git pull
+// sudo=ConEmuC -c $* -new_console:ac
+// aliases=DOSKEY /MACROS
+// cat=ConEmuC -type $*
+// ...=cd /d "%ConEmuDir%"

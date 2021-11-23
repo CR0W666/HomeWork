@@ -8,22 +8,24 @@ public class CiselnyVzor {
         String message = """
                         Please input the desired size of the pyramid\"""
                         (only numbers, numbers larger than 1000 work better)
-                \"""\"""-----------------------------------------------------------""";
+                \"""\"""-----------------------------------------------------------
+                        """;
 
         renderPyramid(String.valueOf(init(message)));
 
     }
 
     public static void programInfo() {
-        String message = """
+        System.out.println(
+                """
                         This program takes in a number, for example 5321 and then prints a pyramid as such: \"""\"""
                         5321\"""
                         532\"""
                         53\"""
                         5\"""
-                        """;
+                        """);
 
-        System.out.println(message);
+       
     }
 
     public static int init(String msg) {
