@@ -8,6 +8,7 @@
 
 
 //custom cmder user aliases
+// winfetch=powershell winfetch
 // gf=git add . & git commit -m $* & git push
 // ga=git add . 
 // gc=git commit -m $*
