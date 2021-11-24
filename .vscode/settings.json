@@ -74,3 +74,14 @@
 // nrd=npm run dev
 // nrs=npm run serve
 // nrw=npm run watch
+// ..=cd ..
+// ..2=cd ../..
+// ..3=cd ../../..
+// ..4=cd ../../../..
+// ll=ls --show-control-chars -F -l --color $*
+// lr=ls --show-control-chars -F -lrt --color $*
+// la=ls --show-control-chars -F -a --color $*
+// grep=grep --color $*
+
+// gric=grep --color -Iir $*
+// gril=grep --color -Iirl $*
