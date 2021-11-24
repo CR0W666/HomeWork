@@ -46,8 +46,8 @@ public class LogisticCompanyRetarded {
     private static void loadingAndUnloading(List<Car> cars, String input) {
         try {
             String[] idAndWeight = input.split(" ");
-            cars.stream().takeWhile(car -> Integer.parseInt(idAndWeight[0]) < (car.getId() + 1)
-                    || Integer.parseInt(idAndWeight[1]) >= 0).forEach(car -> {
+            cars.stream().takeWhile(car -> Integer.parseInt(idAndWeight[0]) < (car.getId() + 1)|| Integer.parseInt(idAndWeight[1]) >= 0)
+                    .forEach(car -> {
                         int inputID = Integer.parseInt(idAndWeight[0]);
                         double inputChange = Double.parseDouble(idAndWeight[1]);
                         if ((car.getId() + 1) == inputID) {
