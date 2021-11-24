@@ -19,3 +19,6 @@
 // aliases=DOSKEY /MACROS
 // cat=ConEmuC -type $*
 // ...=cd /d "%ConEmuDir%"
+// ce=ConEmuC -echo $*
+// st=start $* -cur_console:n
+// cd=excd $*
