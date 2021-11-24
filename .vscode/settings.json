@@ -7,7 +7,7 @@
 }
 
 
-//custom cmder user aliases
+//REM custom cmder user aliases
 // ;= @echo off
 // ;= rem Call DOSKEY and use this file as the macrofile
 // ;= %SystemRoot%\system32\doskey /listsize=1000 /macrofile=%0%
@@ -85,3 +85,7 @@
 
 // gric=grep --color -Iir $*
 // gril=grep --color -Iirl $*
+
+
+//cmderconfa= cd %cmder_root%"\config\" & code user_aliases.cmd
+//cmderconfp= cd %cmder_root%"\config\" & code user_profile.cmd
