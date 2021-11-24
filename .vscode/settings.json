@@ -8,17 +8,69 @@
 
 
 //custom cmder user aliases
+// ;= @echo off
+// ;= rem Call DOSKEY and use this file as the macrofile
+// ;= %SystemRoot%\system32\doskey /listsize=1000 /macrofile=%0%
+// ;= rem In batch mode, jump to the end of the file
+// ;= goto:eof
+// ;= Add aliases below here
+
+// e.=explorer .
+// gl=git log --oneline --all --graph --decorate  $*
+// ls=ls --show-control-chars -F --color $*
+// pwd=cd
+// clear=cls
+// unalias=alias /d $1
+// vi=vim $*
+// cmderr=cd /d "%CMDER_ROOT%"
+
 // winfetch=powershell winfetch
-// gf=git add . & git commit -m $* & git push
-// ga=git add . 
-// gc=git commit -m $*
-// gac=git add & git commit -m $*
-// gp=git push
-// gu=git pull
 // sudo=ConEmuC -c $* -new_console:ac
 // aliases=DOSKEY /MACROS
 // cat=ConEmuC -type $*
 // ...=cd /d "%ConEmuDir%"
 // ce=ConEmuC -echo $*
 // st=start $* -cur_console:n
-// cd=excd $*
+// REM cd=excd $*
+// gv=git --version  
+// lt=ls -lstr --color=auto  
+// gotoschool=cd "C:\Users\Admin\Desktop\skola\HomeWork"  
+// init=C:\cmder\vendor\init.bat  
+// REM git
+// gf=git add . & git commit -m $* & git push
+// gc=git commit -m $*
+// gac=git add & git commit -m $*
+// gp=git push
+// gu=git pull
+// gpl=git pull $* 
+// ga=git add $*  
+// ga.=git add .  
+// gb=git branch $*  
+// gs=git status $*  
+// gcl=git clone $*  
+// gck=git checkout $*  
+// gi=git init  
+// gm=git merge  
+// gplbit=git pull bitbucket master $*
+// gplgit=git pull github master
+// gplo=git pull origin $*
+// gplom=git pull origin master $*
+// gps=git push $*
+// gpsbit=git push bitbucket master
+// gpsgit=git push github master
+// gpso=git push origin $*
+// gpsom=git push origin master $*
+// gr=git reset $*
+// grfl=git reflog $*
+// grh=git reset --hard $*
+// grhh=git reset --hard HEAD
+// grs=git reset --soft $*
+// grm=git rm $*
+// grv=git remote -v
+// REM npm
+// ni=npm install $*
+// nu=npm update
+// nrb=npm run build
+// nrd=npm run dev
+// nrs=npm run serve
+// nrw=npm run watch
