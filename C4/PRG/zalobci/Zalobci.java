@@ -10,20 +10,19 @@ import java.util.Scanner;
 
 /*
 * Zpracujte soubor naklady_zastoupeni.csv (nebo můžete mít nahardcoděno v aplikaci).
-! V něm jsou 3 údaje - rok, jméno a částka.
+* V něm jsou 3 údaje - rok, jméno a částka.
 * Každý řádek vhodně reprezentujte třídou a uložte do kolekce..
-1. Spočítejte průměrnou částku sporu (zaokrouhlenou na celé 100 koruny, inflaci ignorujme).
-2. Spočítejte, který žalobce "stál" celkově nejvíc. (Tj. součet částek všech jeho sporů), a kolik byla jeho celková "cena"
+! 1. Spočítejte průměrnou částku sporu (zaokrouhlenou na celé 100 koruny, inflaci ignorujme).
+! 2. Spočítejte, který žalobce "stál" celkově nejvíc. (Tj. součet částek všech jeho sporů), a kolik byla jeho celková "cena"
 */
 
 public class Zalobci {
     public static void main(String[] args) throws FileNotFoundException {
         final List<Disputee> disputes = initDisputes();
-        final Map<String, Long> groupedByName = groupByName(disputes);
         final double totalAvg = avgDisputeCosts(disputes);
-        System.out.println(totalAvg);
-        groupedByName.forEach( (name, cost) -> System.out.println(name + ": " + cost));
-   
+        final Disputee mostExpensiveDisputee = mostExpensiveDisputee(groupByName(disputes));
+        System.out.println(totalAvg + " | " + Math.floor(totalAvg/100) + " Stovek");
+        System.out.println("Nejdrazsi spor je od " + mostExpensiveDisputee.name + ": " + mostExpensiveDisputee.cost + "kc");
     }
 
 
@@ -66,13 +65,22 @@ public class Zalobci {
         return grouped;
     }
 
+    public static Disputee mostExpensiveDisputee(Map<String, Long> disputees) {
+        Map.Entry<String, Long> mostExpensiveDisputee = disputees.entrySet()
+                                                                 .stream()
+                                                                 .max((entry1, entry2) -> entry1.getValue() > entry2.getValue() ? 1 : -1).get();
+        String name = mostExpensiveDisputee.getKey();
+        Long cost = mostExpensiveDisputee.getValue();
+
+        return new Disputee("null", name, cost);
+    }
     public static double avgDisputeCosts(List<Disputee> disputes) {
         long sum = 0;
         for (Disputee disputee : disputes) {
             sum += disputee.cost;
         }
-
-        return (double) sum / disputes.size();
-    }
+        
+        return ((double) sum / disputes.size());
+    } 
 
 }
