@@ -23,11 +23,12 @@ public class DBPisni {
         final String choiceInfo = """
                 ---------------------------\"""
                 Zadejte jakou operaci chcete provest.\"""
-                1) Prumerna delka pisne interpreta\"""
-                2) Pocet pisni interpreta\"""
-                3) Pocet pisni obsahujici frazi\"""
-                "END") konec
+                1. Prumerna delka pisne interpreta\"""
+                2. Pocet pisni interpreta\"""
+                3. Pocet pisni obsahujici frazi\"""
+                "END". konec
                 """;
+                
         // Main loop
         String choice;
         while (true) {
