@@ -1,11 +1,11 @@
 package zalobci;
 
-public class Zalobce {
+public class Disputee {
 
     String year;
     String name;
-    Double cost;
-    public Zalobce(String year, String name, Double cost) {
+    Long cost;
+    public Disputee(String year, String name, Long cost) {
         this.year = year;
         this.name = name;
         this.cost = cost;

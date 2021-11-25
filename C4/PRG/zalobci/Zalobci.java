@@ -3,34 +3,77 @@ package zalobci;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
-/* 
-*Zpracujte soubor naklady_zastoupeni.csv (nebo můžete mít nahardcoděno v aplikaci).
+/*
+* Zpracujte soubor naklady_zastoupeni.csv (nebo můžete mít nahardcoděno v aplikaci).
 ! V něm jsou 3 údaje - rok, jméno a částka.
-*Každý řádek vhodně reprezentujte třídou a uložte do kolekce..
-
+* Každý řádek vhodně reprezentujte třídou a uložte do kolekce..
 1. Spočítejte průměrnou částku sporu (zaokrouhlenou na celé 100 koruny, inflaci ignorujme).
-2. Spočítejte, který žalobce "stál" celkově nejvíc. 
-(Tj. součet částek všech jeho sporů), a kolik byla jeho celková "cena"
+2. Spočítejte, který žalobce "stál" celkově nejvíc. (Tj. součet částek všech jeho sporů), a kolik byla jeho celková "cena"
 */
-
 
 public class Zalobci {
     public static void main(String[] args) throws FileNotFoundException {
-        List<Zalobce> disputes = new ArrayList<>();
+        final List<Disputee> disputes = initDisputes();
+        final Map<String, Long> groupedByName = groupByName(disputes);
+        final double totalAvg = avgDisputeCosts(disputes);
+        System.out.println(totalAvg);
+        groupedByName.forEach( (name, cost) -> System.out.println(name + ": " + cost));
+   
+    }
 
-        try (Scanner sc = new Scanner(new File("./naklady_zastoupeni.csv"))) {
-            while (sc.hasNextLine()) {
-                String[] line = sc.nextLine().split(",");
-                disputes.add(new Zalobce(line[0], line[1], Double.parseDouble(line[2])));
+
+    public static List<Disputee> initDisputes() throws FileNotFoundException {
+        List<Disputee> disputes = new ArrayList<>();
+        
+        Scanner sc = new Scanner(new File("C4\\PRG\\zalobci\\naklady_zastoupeni.csv"));
+        sc.nextLine(); //Skip header
+        while (sc.hasNext()) {
+            String[] line = sc.nextLine().split(",");
+            line[2] = line[2].replace(".00", "");
+            
+            // !hrozne dirty
+            if(line[2].contains("Finspel")) {
+                line[1] += "," + line[2];
+                line[2] = line[3].replace(".00", "");
             }
 
-        } catch (Exception e) {
-            System.out.println("Neplatny vstup");
+            disputes.add(new Disputee(line[0], line[1], Long.parseLong(line[2])));
+
         }
 
-        
+
+
+        return disputes;
     }
+
+    public static Map<String, Long> groupByName(List<Disputee> disputes) {
+        
+        Map<String, Long> grouped = new HashMap<>();
+        
+        for (Disputee dispute : disputes) {
+            if(grouped.containsKey(dispute.name)) 
+                grouped.put(dispute.name, grouped.get(dispute.name) + dispute.cost);
+            else 
+                grouped.put(dispute.name, dispute.cost);
+        }
+
+
+        return grouped;
+    }
+
+    public static double avgDisputeCosts(List<Disputee> disputes) {
+        long sum = 0;
+        for (Disputee disputee : disputes) {
+            sum += disputee.cost;
+        }
+
+        return (double) sum / disputes.size();
+    }
+
 }
