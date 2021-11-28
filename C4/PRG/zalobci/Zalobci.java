@@ -21,7 +21,7 @@ public class Zalobci {
         final List<Disputee> disputes = initDisputes();
         
         final double totalAvg = avgDisputeCosts(disputes);
-        System.out.println("Prumerna castka sporu: " + Math.floor(totalAvg / 100) + " Stovek ("+ totalAvg + "kc)");
+        System.out.println("Prumerna castka sporu: " + Math.floor(totalAvg / 100) + " Stovek (" + Math.round(totalAvg) + "kc)");
 
         final Disputee mostExpensiveDisputee = mostExpensiveDisputee(groupByName(disputes));
         final String name = mostExpensiveDisputee.name;
@@ -38,15 +38,13 @@ public class Zalobci {
 
         while (sc.hasNext()) {
             final String[] line = sc.nextLine().split(",");
-            line[2] = line[2].replace(".00", "");
 
-            // !hrozne dirty
-            if (line[2].contains("Finspel")) {
-                line[1] += "," + line[2];
-                line[2] = line[3].replace(".00", "");
+            if(line.length > 2) {
+                for(int i = 2; i <= line.length-2; i++) line[1] += "," + line[i];
             }
+            
 
-            disputes.add(new Disputee(line[0], line[1], Long.parseLong(line[2])));
+            disputes.add(new Disputee(line[0], line[1], Long.parseLong(line[line.length-1].replace(".00", ""))));
 
         }
 
@@ -65,7 +63,6 @@ public class Zalobci {
             else
                 grouped.put(dispute.name, dispute.cost);
         }
-
 
         return grouped;
     }
