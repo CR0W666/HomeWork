@@ -1,3 +1,6 @@
+import java.util.*
+import kotlin.math.pow
+
 object ArmstrongCorrect {
     @kotlin.jvm.JvmStatic
     fun main(args: Array<String>) {
@@ -21,12 +24,12 @@ object ArmstrongCorrect {
         }
     }
 
-    fun isArmstrong(num: Int): Boolean {
+    private fun isArmstrong(num: Int): Boolean {
         val digits: CharArray = num.toString().toCharArray()
         var sum = 0
         for (digit in digits) {
             val idigit: Int = java.lang.Character.getNumericValue(digit)
-            sum += java.lang.Math.pow(idigit.toDouble(), digits.size.toDouble()).toInt()
+            sum += idigit.toDouble().pow(digits.size.toDouble()).toInt()
         }
         return sum == num
     }

@@ -1,7 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8fd9468a-6534-4c05-8eb8-71c7ec0379a6" name="Changes" comment="" />
+    <list default="true" id="8fd9468a-6534-4c05-8eb8-71c7ec0379a6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRG/_abba/Abba.java" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prg/_abba/Abba.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRG/_atbash/Atbash.java" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prg/_atbash/Atbash.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRG/_bin/Bin.java" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prg/_bin/Bin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRG/_cara/Cara.java" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prg/_cara/Cara.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRG/_ryba/Ryba.java" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prg/_ryba/Ryba.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRG/ciselny_vzor/CiselnyVzor.java" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prg/ciselny_vzor/CiselnyVzor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRG/cnb_two/CnbKurz.java" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prg/cnb_two/CnbKurz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRG/cnb_two/ExchangeRate.java" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prg/cnb_two/ExchangeRate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRG/cnb_two/kurzy.txt" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prg/cnb_two/kurzy.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRG/cool_sifra_two/CoolSifra.java" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prg/cool_sifra_two/CoolSifra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRG/databaze_pisni/DBPisni.java" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prg/databaze_pisni/DBPisni.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRG/databaze_pisni/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prg/databaze_pisni/Song.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRG/databaze_pisni/SpeedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prg/databaze_pisni/SpeedTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRG/logistic_company/correct/Car.kt" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prg/logistic_company/correct/Car.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRG/logistic_company/correct/LogisticCompany.kt" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prg/logistic_company/correct/LogisticCompany.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRG/logistic_company/correct/Truck.kt" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prg/logistic_company/correct/Truck.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRG/logistic_company/retarded/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prg/logistic_company/retarded/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRG/logistic_company/retarded/LogisticCompanyRetarded.java" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prg/logistic_company/retarded/LogisticCompanyRetarded.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRG/minor_factorial_shenanignas/Factorial.java" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prg/minor_factorial_shenanignas/Factorial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRG/numparse/NumParse.java" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prg/numparse/NumParse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRG/ovoce_zelenina/OvoceZelenina.java" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prg/ovoce_zelenina/OvoceZelenina.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRG/oz_two/OzTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prg/oz_two/OzTwo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRG/perfect_numbers/perfects.java" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prg/perfect_numbers/perfects.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRG/primes/Primes.java" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prg/primes/Primes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRG/suma_nadprumernych_cisel/Snc.java" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prg/suma_nadprumernych_cisel/Snc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRG/tests/test16_09_2021/Test16x9x2021.java" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prg/tests/test16_09_2021/Test16x9x2021.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRG/tests/test2021_10_7/CorrectArmstrong.java" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prg/tests/test2021_10_7/CorrectArmstrong.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRG/tests/test2021_10_7/FakeArmstrong.java" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prg/tests/test2021_10_7/FakeArmstrong.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRG/tests/test21_10_2021/Test21x10x2021.java" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prg/tests/test21_10_2021/Test21x10x2021.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRG/tests/test23_09_2021/Test23x9x2021.java" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prg/tests/test23_09_2021/Test23x9x2021.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRG/tests/test30_09_2021/Test30x9x2021.java" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prg/tests/test30_09_2021/Test30x9x2021.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRG/validate_bank_account_number/ValidaceBankovnichUctu.java" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prg/validate_bank_account_number/ValidaceBankovnichUctu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRG/zalobci/Disputee.java" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prg/zalobci/Disputee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRG/zalobci/Zalobci.java" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prg/zalobci/Zalobci.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRG/zalobci/naklady_zastoupeni.csv" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prg/zalobci/naklady_zastoupeni.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRS/ArmstrongCorrect.kt" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prs/ArmstrongCorrect.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRS/OzTwo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prs/OzTwo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRS/PRS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prs/PRS.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRS/Snc.kt" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prs/Snc.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRS/aoc_iioivxi/Aoc2015x1.java" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prs/aoc_iioivxi/Aoc2015x1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRS/banknotes/bankNotesOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prs/banknotes/bankNotesOne.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRS/big_small/SmallBig.java" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prs/big_small/SmallBig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRS/cnbKurz.kt" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prs/cnbKurz.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRS/codeforces_ffz_a/CodeForces550A.java" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prs/codeforces_ffz_a/CodeForces550A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRS/codeforces_one_a/CodeForces1A.java" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prs/codeforces_one_a/CodeForces1A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRS/numparse_prs/NumParsePrs.java" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prs/numparse_prs/NumParsePrs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRS/poskozeny_prumer/PoskozenyPrumer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prs/poskozeny_prumer/PoskozenyPrumer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C4/PRS/sudy_delitelny_tri/SudyDelitelnyTri.java" beforeDir="false" afterPath="$PROJECT_DIR$/C4/prs/sudy_delitelny_tri/SudyDelitelnyTri.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,33 +60,32 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
   <component name="ProjectId" id="210AyjQmt5jawnIow2n3wm1l4Cc" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="11" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RunManager">
-    <configuration name="Unnamed" type="JetRunConfigurationType" nameIsGenerated="true">
+    <configuration name="LogisticCompany" type="JetRunConfigurationType" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="Kotlin SDK" />
       <module name="HomeWork" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="PoskozenyPrumer.kt" />
-      <option name="WORKING_DIRECTORY" />
+      <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -53,6 +102,7 @@
       <workItem from="1637067903392" duration="334000" />
       <workItem from="1637068296914" duration="4197000" />
       <workItem from="1637785095682" duration="13000" />
+      <workItem from="1638178650083" duration="3730000" />
     </task>
     <servers />
   </component>

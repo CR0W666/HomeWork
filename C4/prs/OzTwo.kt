@@ -1,3 +1,5 @@
+package prs
+
 import java.util.*
 
 object OzTwo {
@@ -21,7 +23,7 @@ object OzTwo {
         printTypes(zel, ovc)
     }
 
-    fun fillGroup(group: String, size: Int, sc: Scanner): ArrayList<String> {
+    private fun fillGroup(group: String, size: Int, sc: Scanner): ArrayList<String> {
         val groupArr = ArrayList<String>()
         var i = 0
         while (i < size) {
@@ -37,7 +39,7 @@ object OzTwo {
     }
 
     private fun checkType(zel: ArrayList<String>, ovc: ArrayList<String>, sc: Scanner) {
-        var input = ""
+        var input: String
         println("Zadej neco co chces identifikovat. (\"END\" pro konec.) ")
         do {
             input = sc.nextLine()

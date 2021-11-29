@@ -67,7 +67,7 @@ object cnbKurz {
             rates = initRates()
         } catch (e: FileNotFoundException) {
             println("Soubor s kurzy nebyl nalezen. Pridejte soubor s kurzy do stejneho adresare jako program s nazvem \"kurzy.txt\"")
-            rates = ArrayList()
+
             exitProcess(0)
         }
         println("----------------\nDostupne Kurzy:")
