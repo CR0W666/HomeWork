@@ -1,13 +1,32 @@
 package C4.prg.aoc2021.day1;
 
+/**
+ * PartOne
+ */
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class PartTwo {
-    public static void main(String[] args) {
-        final int[] data = getInput();
+public class DayOne {
 
+    public static void main(String[] args) {
+        int[] data = getInput();
+        System.out.println("Part One: " + partOne(data));
+        System.out.println("Part Two: " + partTwo(data));
+    }
+
+    public static int partOne(int[] data) {
+        int answer = 0;
+        int prevVal = data[0];
+        for (int currentVal : data) {
+            if(currentVal > prevVal) answer++;
+            prevVal = currentVal;
+        }
+
+        return answer;
+    }
+
+    public static int partTwo(int[] data) {
         int answer = 0;
         int sumOfLast = data[0] + data[1] + data[2];
         
@@ -16,8 +35,8 @@ public class PartTwo {
             if(sumCurr > sumOfLast) answer++;
             sumOfLast = sumCurr;
         }
-        
-        System.out.println(answer);
+
+        return answer;
     }
 
     public static int[] getInput() {
@@ -39,5 +58,4 @@ public class PartTwo {
         }
 
     }
-    
 }
