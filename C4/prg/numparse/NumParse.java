@@ -1,4 +1,4 @@
-package numparse;
+package C4.prg.numparse;
 
 import java.util.Scanner;
 import java.util.regex.Pattern;

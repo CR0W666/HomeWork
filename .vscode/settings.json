@@ -1,7 +1,6 @@
 {
     "java.project.sourcePaths": [
-        "C4\\PRG",
-        "C4\\PRS"
+        "."
     ],
     "editor.fontFamily": "Fira Code"
 }

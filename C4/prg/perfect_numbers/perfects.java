@@ -1,4 +1,4 @@
-package perfect_numbers;
+package C4.prg.perfect_numbers;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;

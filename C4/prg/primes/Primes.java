@@ -1,4 +1,4 @@
-package primes;
+package C4.prg.primes;
 
 import java.util.Scanner;
 

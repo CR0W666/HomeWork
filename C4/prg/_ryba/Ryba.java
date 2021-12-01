@@ -1,4 +1,4 @@
-package _ryba;
+package C4.prg._ryba;
 
 import java.util.Scanner;
 

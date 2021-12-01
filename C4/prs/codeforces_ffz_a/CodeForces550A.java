@@ -1,4 +1,4 @@
-package codeforces_ffz_a;
+package C4.prs.codeforces_ffz_a;
 
 public class CodeForces550A {
     public static void main(String[] args) {

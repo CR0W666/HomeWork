@@ -1,4 +1,4 @@
-package aoc_iioivxi;
+package C4.prs.aoc_iioivxi;
 
 class Aoc2015x1 {
     public static void main(String[] args) {

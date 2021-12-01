@@ -1,4 +1,4 @@
-package cool_sifra_two;
+package C4.prg.cool_sifra_two;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

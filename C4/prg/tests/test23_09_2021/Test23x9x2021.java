@@ -1,4 +1,4 @@
-package tests.test23_09_2021;
+package C4.prg.tests.test23_09_2021;
 
 class Test23x9x2021 {
     public static void main(String[] args) {

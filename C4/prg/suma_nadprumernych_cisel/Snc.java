@@ -1,4 +1,4 @@
-package suma_nadprumernych_cisel;
+package C4.prg.suma_nadprumernych_cisel;
 
 import java.util.ArrayList;
 import java.util.List;

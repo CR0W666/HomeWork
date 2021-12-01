@@ -1,4 +1,4 @@
-package ciselny_vzor;
+package C4.prg.ciselny_vzor;
 
 import java.util.Scanner;
 

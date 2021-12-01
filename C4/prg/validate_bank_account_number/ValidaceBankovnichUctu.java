@@ -1,4 +1,4 @@
-package validate_bank_account_number;
+package C4.prg.validate_bank_account_number;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

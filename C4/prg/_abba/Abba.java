@@ -1,4 +1,4 @@
-package _abba;
+package C4.prg._abba;
 
 import java.util.Scanner;
 

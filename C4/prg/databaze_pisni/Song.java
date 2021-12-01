@@ -1,4 +1,4 @@
-package databaze_pisni;
+package C4.prg.databaze_pisni;
 
 public class Song {
     private String name; // Name Of Song

@@ -1,4 +1,4 @@
-package minor_factorial_shenanignas;
+package C4.prg.minor_factorial_shenanignas;
 
 import java.util.Scanner;
 import java.util.stream.LongStream;

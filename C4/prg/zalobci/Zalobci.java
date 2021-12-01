@@ -1,4 +1,4 @@
-package zalobci;
+package C4.prg.zalobci;
 
 import java.io.File;
 import java.io.FileNotFoundException;

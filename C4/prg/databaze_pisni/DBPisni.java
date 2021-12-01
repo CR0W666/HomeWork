@@ -1,4 +1,4 @@
-package databaze_pisni;
+package C4.prg.databaze_pisni;
 
 import java.util.Scanner;
 

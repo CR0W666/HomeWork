@@ -1,4 +1,4 @@
-package tests.test2021_10_7;
+package C4.prg.tests.test2021_10_7;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

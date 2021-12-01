@@ -1,4 +1,4 @@
-package cnb_two;
+package C4.prg.cnb_two;
 
 class ExchangeRate {
     String country;

@@ -1,4 +1,4 @@
-package banknotes;
+package C4.prs.banknotes;
 
 class BankNotesOne {
     public static void main(String[] args) {

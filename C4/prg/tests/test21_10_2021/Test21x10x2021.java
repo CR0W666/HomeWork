@@ -1,4 +1,4 @@
-package tests.test21_10_2021;
+package C4.prg.tests.test21_10_2021;
 
 import java.util.Scanner;
 

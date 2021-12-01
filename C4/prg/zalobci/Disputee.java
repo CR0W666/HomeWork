@@ -1,4 +1,4 @@
-package zalobci;
+package C4.prg.zalobci;
 
 public class Disputee {
 

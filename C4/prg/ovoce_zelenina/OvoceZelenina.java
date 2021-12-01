@@ -1,4 +1,4 @@
-package ovoce_zelenina;
+package C4.prg.ovoce_zelenina;
 
 import java.util.Scanner;
 

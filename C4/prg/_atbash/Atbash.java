@@ -1,4 +1,4 @@
-package _atbash;
+package C4.prg._atbash;
 
 import java.util.Scanner;
 

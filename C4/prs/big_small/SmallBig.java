@@ -1,4 +1,4 @@
-package big_small;
+package C4.prs.big_small;
 
 import java.util.Scanner;
 import java.util.ArrayList;

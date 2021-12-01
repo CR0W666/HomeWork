@@ -1,4 +1,4 @@
-package sudy_delitelny_tri;
+package C4.prs.sudy_delitelny_tri;
 
 public class SudyDelitelnyTri {
     public static void main(String[] args) {

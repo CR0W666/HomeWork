@@ -1,4 +1,4 @@
-package logistic_company.retarded;
+package C4.prg.logistic_company.retarded;
 
 import java.util.Arrays;
 import java.util.HashMap;

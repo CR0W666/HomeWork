@@ -1,4 +1,4 @@
-package _cara;
+package C4.prg._cara;
 
 import java.util.Scanner;
 

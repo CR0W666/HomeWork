@@ -1,4 +1,4 @@
-package _bin;
+package C4.prg._bin;
 
 import java.util.Scanner;
 import java.util.Collections;

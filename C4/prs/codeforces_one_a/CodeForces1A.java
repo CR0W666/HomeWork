@@ -1,4 +1,4 @@
-package codeforces_one_a;
+package C4.prs.codeforces_one_a;
 
 public class CodeForces1A {
 

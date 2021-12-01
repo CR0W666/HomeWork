@@ -1,4 +1,4 @@
-package cnb_two;
+package C4.prg.cnb_two;
 
 import java.io.File;
 import java.io.FileNotFoundException;

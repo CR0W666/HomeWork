@@ -1,4 +1,4 @@
-package numparse_prs;
+package C4.prs.numparse_prs;
 
 import java.util.Scanner;
 import java.util.regex.Pattern;
