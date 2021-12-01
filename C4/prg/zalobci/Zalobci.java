@@ -26,6 +26,7 @@ public class Zalobci {
         final Disputee mostExpensiveDisputee = mostExpensiveDisputee(groupByName(disputes));
         final String name = mostExpensiveDisputee.name;
         final Long cost = mostExpensiveDisputee.cost;
+        
         System.out.println("Nejdrazsi spor je od " + name + ": " + cost + "kc");
     }
 
