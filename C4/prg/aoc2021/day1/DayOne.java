@@ -40,7 +40,7 @@ public class DayOne {
     }
 
     public static int[] getInput() {
-        try(Scanner sc = new Scanner(new File("C:\\Users\\Admin\\Desktop\\skola\\HomeWork\\C4\\prg\\aoc2021\\day1\\input.txt"))) {
+        try(Scanner sc = new Scanner(new File("C4\\prg\\aoc2021\\day1\\input.txt"))) {
             
             final StringBuilder sb = new StringBuilder();
             while (sc.hasNext()) {
