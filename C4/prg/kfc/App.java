@@ -1,6 +1,5 @@
 package C4.prg.kfc;
 
-import java.util.List;
 /*
 * Představme si, že programujeme informační systém pro fast foodový řetězec (např. KFC, McDonald’s apod.).
 
@@ -20,9 +19,8 @@ import java.util.List;
 */
 public class App {
     protected static final DeliveryService provider = new DeliveryService();
-    protected static final List<FastFooD> stores = provider.getStores();
     protected static final Customer customer = new Customer();
-    
+
     public static void main(String[] args) {
         //TODO
     }
