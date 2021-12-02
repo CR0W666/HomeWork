@@ -21,7 +21,7 @@ public class Zalobci {
         final List<Disputee> disputes = initDisputes();
         
         final double totalAvg = avgDisputeCosts(disputes);
-        System.out.println("Prumerna castka sporu: " + Math.floor(totalAvg / 100) + " Stovek (" + Math.round(totalAvg) + "kc)");
+        System.out.println("Prumerna castka sporu: " + (long) (Math.ceil(totalAvg / 100) * 100) + " Stovek (" + Math.round(totalAvg) + "kc)");
 
         final Disputee mostExpensiveDisputee = mostExpensiveDisputee(groupByName(disputes));
         final String name = mostExpensiveDisputee.name;
