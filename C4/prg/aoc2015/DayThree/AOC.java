@@ -14,12 +14,22 @@ class AOC {
             char[] dirs = sc.nextLine().toCharArray();
             HashSet<Coordinate> uniqueVisited = new HashSet<>();
 
-            Coordinate current = new Coordinate(0,0);
-            uniqueVisited.add(new Coordinate(current.getCoords()));
+            Coordinate santa = new Coordinate(0,0);
+            Coordinate roboSanta = new Coordinate(0,0);
+            boolean robo = false;
+
+            uniqueVisited.add(new Coordinate(santa.getCoords()));
 
             for(char dir : dirs) {
-                current.move(dir);
-                uniqueVisited.add(new Coordinate(current.getCoords()));
+                if(robo) {
+                    santa.move(dir);
+                    uniqueVisited.add(new Coordinate(santa.getCoords()));
+                } else {
+                    roboSanta.move(dir);
+                    uniqueVisited.add(new Coordinate(roboSanta.getCoords()));
+                }
+                robo = !robo;
+                
             }
             System.out.println("Pohnuli jsme se: " + dirs.length);
             System.out.println("Unikatnich domu navstiveno: " + uniqueVisited.size());
