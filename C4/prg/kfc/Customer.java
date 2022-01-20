@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class Customer {
     private List<Integer> history;
-
+    //TODO history for different shops
 
 
     public Customer() {

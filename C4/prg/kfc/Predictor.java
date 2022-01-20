@@ -27,7 +27,7 @@ public class Predictor {
         if(min == max) return max; //always orders the same
         //TODO         
     
-        //guess well never know
+        //guess well never know 
         return (int) ((r.nextInt(1000) > 500.0) ? mostCommon : Math.round(avg));
     }
 
